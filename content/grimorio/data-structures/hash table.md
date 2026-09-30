@@ -241,7 +241,7 @@ En lugar de usar listas, todo se guarda en el mismo arreglo.
 - Linear Probing: busca la siguiente posición libre secuencialmente. Simple, pero sufre de clustering
 - Quadratic Probing: salta en intervalos cuadráticos. Reduce clustering, pero puede no cubrir toda la tabla
 - Double Hashing: usa una segunda función hash para el salto. Mucho mejor distribución, menos colisiones
-- Eliminación: no se puede vaciar la celda, porque cortaría la búsqueda de otras claves. Se usa una marca de borrado (*tombstone*)
+- Eliminación: no se puede vaciar la celda, porque cortaría la búsqueda de otras claves. Por ejemplo, si se borra "seth" y su celda queda vacía, al buscar "cain" se para ahí y no lo encuentra. Se usa una marca de borrado (*tombstone*) y la búsqueda pasa por encima y sigue con la siguiente posición
 
 #### Separate Chaining
 Cada índice apunta a una lista (o estructura).
